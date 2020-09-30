@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 9</title>
+</head>
+<body>
+<input type="text" id="input1">
+<input type="button" value="thêm" onclick="add1()"><br/>
+<p id="display1"></p>
+<input type="text" id="input2">
+<input type="button" value="thêm" onclick="add2()"> <br/>
+<p id="display2"></p>
+<input type="button" value="Nối" onclick="conect()">
+<p id="cong"></p>
+<script>
+    let a = [];
+    let b = [];
+    function add1() {
+        a.push(document.getElementById("input1").value);
+        document.getElementById('display1').innerHTML = a;
+        document.getElementById("input1").value = '';
+    }
+    function add2() {
+        b.push(document.getElementById("input2").value);
+        document.getElementById('display2').innerHTML = b;
+        document.getElementById("input2").value = '';
+    }
+    function conect() {
+        let c = a + b
+        document.getElementById("cong").innerHTML = c
+    }
+</script>
+</body>
+</html>

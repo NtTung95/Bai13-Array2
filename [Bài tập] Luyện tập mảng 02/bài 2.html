@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 2</title>
+</head>
+<body>
+<input type="text" value="" id="input">
+<input type="button" value="add" onclick="add()">
+<input type="button" value="reverse" onclick="setup()">
+<p id="display"></p>
+<p id="setup"></p>
+<script>
+    let arr = []
+function add() {
+        arr.push(document.getElementById("input").value)
+        document.getElementById('input').value = ''
+        document.getElementById('display').innerHTML = arr
+}
+function setup() {
+        arr.join("");
+        arr.reverse();
+        document.getElementById("setup").innerHTML = arr;
+}
+
+</script>
+</body>
+</html>

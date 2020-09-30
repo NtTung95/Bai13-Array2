@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 7</title>
+</head>
+<body>
+<input type="number" id="number"><br/>
+<input type="button" value="thêm" onclick="add()">
+<input type="button" value="xóa" onclick="xoa()">
+<p id="display"></p>
+<p id="change"></p>
+<script>
+    let a = [];
+    function add() {
+        a.push(document.getElementById("number").value);
+        document.getElementById("number").value = '';
+        document.getElementById("display").innerHTML = a;
+    }
+    function xoa() {
+        let b =a.indexOf(document.getElementById("number").value);
+
+        if (b !== -1) {
+            a.splice(b,1);
+
+        console.log(a);
+        }document.getElementById("change").innerHTML = a;
+    }
+</script>
+</body>
+</html>

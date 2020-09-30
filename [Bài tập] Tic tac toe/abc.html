@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr =["abcd",'abc','eff','abcd','abcde','jshjsdflskf']
+    let maxleight = arr[0].length
+    let output = []
+    for (let i = 1; i < arr.length; i++) {
+        if (maxleight < arr[i].length) {
+            maxleight = arr[i].length;
+        }
+    }
+    for (j = 0;j< arr.length; j++){
+        if (maxleight==arr[j].length){
+            output.push(arr[j])
+        }
+    }
+    console.log(output);
+
+</script>
+</body>
+</html>

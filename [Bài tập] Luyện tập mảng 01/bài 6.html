@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 6</title>
+</head>
+<body>
+<input type="number" id="number"><br/>
+<input type="button" value="thêm" onclick="add()">
+<input type="button" value="tìm" onclick="search()">
+<p id="display"></p>
+<script>
+    let a = [];
+    function add() {
+        a.push(document.getElementById("number").value);
+        document.getElementById("number").value = '';
+    }
+    function search() {
+        if (a.indexOf(document.getElementById("number").value) !== -1) {
+            document.getElementById("display").innerHTML = document.getElementById("number").value + "is in the array";
+        } else {
+            document.getElementById("display").innerHTML = document.getElementById("number").value + "is not in the array";
+        }
+    }
+</script>
+</body>
+</html>

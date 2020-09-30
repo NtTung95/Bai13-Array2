@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 5</title>
+</head>
+<body>
+<input type="text" id="input1">
+<input type="button" value="thêm" onclick="add1()"><br/>
+<p id="display1"></p>
+<input type="text" id="input2">
+<input type="button" value="thêm" onclick="add2()"> <br/>
+<p id="display2"></p>
+<input type="button" value="check" onclick="check()">
+<p id="cong"></p>
+<script>
+    let a = [];
+    let b = [];
+    function check() {
+        if (a.length !== b.length) {
+            return false
+        } else {
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] !== b[i]) {
+                    return false
+                }
+            }
+            return true;
+        }
+    }
+
+        function add1() {
+            a.push(document.getElementById("input1").value);
+            document.getElementById('display1').innerHTML = a;
+            document.getElementById("input1").value = '';
+        }
+
+        function add2() {
+            b.push(document.getElementById("input2").value);
+            document.getElementById('display2').innerHTML = b;
+            document.getElementById("input2").value = '';
+        }
+
+    console.log(check());
+</script>
+</body>
+</html>

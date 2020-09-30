@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 4</title>
+</head>
+<body>
+<input type="text" id="input">
+<input type="button" value="thêm" onclick="add()">
+<input type="button" value="đảo" onclick="reverse()">
+<p id="display"></p>
+<p id="daovitri"></p>
+<script>
+    let arr = [];
+    function add() {
+        arr.push(document.getElementById("input").value);
+        document.getElementById('display').innerHTML = arr;
+        document.getElementById("input").value = '';
+    }
+    function reverse() {
+        arr.reverse();
+        document.getElementById("daovitri").innerHTML = arr;
+        console.log(arr);
+    }
+</script>
+</body>
+</html>

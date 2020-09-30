@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    tr, td {
+        border: 1px solid red;
+        width: 50px;
+        height: 50px;
+    }
+</style>
+<body>
+<h3>đau hết cả đầu</h3>
+<p id="display"></p>
+<script>
+    const row = 10
+    const col = 10
+
+
+    function draw(){
+        let board = [];
+        let tb=""
+    tb += "<table style='text-align: center; border: 5px solid blue; border-collapse: collapse'>";
+    for(let i = 0; i < row; i++) {
+        board[i] = []
+        tb += "<tr>";
+        for (let j = 0; j < col; j++) {
+            tb += "<td>";
+            board[i][j] = "*";
+            tb += "</td>";
+        }
+        tb += "</tr>";
+    }
+    tb += "</table>";
+    document.getElementById("display").innerHTML = tb
+    }
+    draw()
+</script>
+</body>
+</html>

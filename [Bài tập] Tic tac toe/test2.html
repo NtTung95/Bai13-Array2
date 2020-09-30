@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    for (let a = 0; a <= 200 ; a++) {
+        for ( let b = 0; b <= 100; b++) {
+            for  ( let c = 0; c <= 40; c++){
+                let sum = a + 2*b + 5*c;
+                if (sum === 200) {
+                    console.log(a ,b ,c);
+                }
+            }
+        }
+    }
+
+    let html;
+    html += "<table style='width: 100%'>";
+    for (i = 0; i <= 10; i++) {
+        html += "<tr>"
+        for (j = 0; j <= 10; j++) {
+            html += "<td>" + i + "x" + j + "=" + i * j + "</td>";
+        }
+        document.write("<br/>")
+        html += "</tr>"
+    }
+    html += "</table>";
+
+    document.write(html);
+
+    function func1(a){
+        if(a == 2)
+            return 2;
+        return a * func1(a - 1);
+    }
+    console.log(func1(5))
+</script>
+</body>
+</html>
